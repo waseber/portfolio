@@ -59,12 +59,14 @@ html {
   margin: 0;
 }
 
+
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
 }
 .page-enter,
 .page-leave-to {
+  transform: translateX(-15%);
   opacity: 0;
 }
 

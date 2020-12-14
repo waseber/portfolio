@@ -19,6 +19,7 @@
     </div>
 </template>
 
+
 <style scoped>
 .content__page{
     display: flex;
