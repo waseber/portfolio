@@ -2,17 +2,23 @@
     <nav>
         <h3>Projects</h3>
         <div class="links">
-                <nuxt-link v-for="project in projects" :to="project.path"
-                    class="m-15 m-b0 button--green"
-                >
-                {{project.proj_name}}
-                </nuxt-link>
-          
+            <ul>
+                <li v-for="project in projects"
+                @click="closeMenu"
+               >
+                    <nuxt-link :to="project.path"
+                      class="w-100 m-15 m-b0 button--green"          
+                    >
+                    {{project.proj_name}}
+                    </nuxt-link>
+                </li>
+          </ul>
         </div>
     </nav>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 const data = {
   "data": [
       {
@@ -22,6 +28,10 @@ const data = {
       {
         "proj_name": "ObitsArchive.com",
         "path": "/projects/obitsarchive"
+      },
+      {
+        "proj_name": "Publisher Archives",
+        "path": "/projects/publisher-archives"
       },
       {
         "proj_name": "Nephrology-Hypertension of Naples",
@@ -36,6 +46,10 @@ const data = {
         "path": "/projects/mysoundtrack"
       },
       {
+        "proj_name": "Reuters",
+        "path": "/projects/reuters"
+      },
+      {
         "proj_name": "Band Site",
         "path": "/projects/band"
       }
@@ -47,10 +61,22 @@ export default {
         data: data.data
         }
     },
+    fetch ({ store }) {
+        store.commit('toggle')
+    },
     computed: {
+        ...mapState(['isIn']),  
+        
         projects() {
-        return this.data
+            return this.data
         }
+    },
+
+    methods: {
+        closeMenu: function() {
+            this.$store.commit('toggle')
+        }
+    
     }
 }
 </script>
@@ -64,8 +90,13 @@ nav{
     border-right: 1px solid #ddd;
 }
 
-.links{
+ul{
+    padding: 0;
     display: flex;
     flex-direction: column;
+}
+
+li{
+    display: flex
 }
 </style>

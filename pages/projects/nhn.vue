@@ -1,9 +1,9 @@
 <template>
     <div class="content__page">
-        <h2>Nephrology-Hyptertension of Naples</h2>
+        <h2 class="subtitle">Nephrology-Hyptertension of Naples</h2>
+        <p class="m-15">This is a commercial website for a nephrologist. Version one of this site was built using Microsoft MVC.Net. This version is WordPress.</p>
 
         <img class="screenshot" src="~/assets/img/NHN-home.png">
-
         <a href="https://www.nhnkidneycenter.com" target="_blank">Visit</a>
 
         <h3>Technology used:</h3>

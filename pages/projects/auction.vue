@@ -1,8 +1,8 @@
 <template>
     <div class="content__page">
-        <h2 class="subtitle">Band Website</h2>
+        <h2 class="subtitle">Online Auction</h2>
 
-        <p class="m-15">This was just a fun UI exercise to build something fun and cool as opposed to practical and intuitive.</p>
+        <p class="m-15">This was a working prototype for a real estate firm in Australia.</p>
 
         <img class="screenshot" src="~/assets/img/MUSE-home.png">
 
@@ -10,8 +10,9 @@
 
         <h3>Technology used:</h3>
             <ul class="tech-list">
-                <li>JavaScript</li>
-                <li>CSS </li>
+                <li>C#</li>
+                <li>ASP.Net </li>
+                <li>SQL Server</li>
                 <li>HTML</li>
             </ul>
 
